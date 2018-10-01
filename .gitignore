@@ -1,0 +1,7 @@
+# virtualenv
+.venv
+venv/
+ENV/
+
+# Mac file details
+.DS_Store

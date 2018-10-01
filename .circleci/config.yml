@@ -1,0 +1,57 @@
+# TODO: Fill out the circleci template
+version: 2
+
+jobs:
+  build_server:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/python:3.4
+      - image: circleci/postgres:9.6.5-alpine-ram
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            cd server
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+#      - run:
+#          name: Run Tests
+#          command: |
+#            cd server
+#            . venv/bin/activate
+#            python manage.py test
+#      - deploy:
+#          name: Deploy server to AWS
+#          command: |
+#            cd server
+#            . venv/bin/activate
+#            sh deploy/deploy.sh
+
+  build_client:
+    working_directory: ~/repo
+#    docker:
+#      - image: circleci/node:7.10
+#    steps:
+#      - checkout
+#      - run:
+#          name: Install Dependencies
+#          command: |
+#            cd client
+#            npm install
+#      - deploy:
+#          name: Build bundle and deploy to S3.
+#          command: |
+#            cd client
+#            sh deploy/deploy.sh
+
+
+workflows:
+  version: 2
+  full_deploy:
+    jobs:
+      - build_server
+      - build_client:
+          requires:
+            - build_server
