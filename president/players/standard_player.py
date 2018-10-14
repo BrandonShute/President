@@ -1,4 +1,4 @@
-from base_player import BasePlayer
+from players.base_player import BasePlayer
 
 
 QUIT_STRING = 'q'
@@ -21,7 +21,7 @@ class StandardPlayer(BasePlayer):
                 break
 
             # TODO:brandon.shute:2018-09-30: Add a remove for index
-            played_cards.append(self.hand.cards[int(passed_input)])
+            played_cards.append(self.cards[int(passed_input)])
 
-        self.hand.remove_cards(played_cards)
+        self.remove_cards(played_cards)
         return played_cards

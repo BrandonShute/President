@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfaec4d5-9387-4708-81c7-d7b40c8cb3e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="dfaec4d5-9387-4708-81c7-d7b40c8cb3e7" name="Default Changelist" comment="Add tests, implement game settings and cleanup">
+      <change afterPath="$PROJECT_DIR$/president/gameplay/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/gameplay/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/gameplay/hand.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/gameplay/round.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/gameplay/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/gameplay/turn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/players/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/players/base_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/players/computer_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/playing_algorithms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/playing_algorithms/always_play_lowest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/playing_algorithms/base_algorithm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/services/reducing_cycle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/gameplay/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/gameplay/test_game_settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/players/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/players/test_base_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/players/test_computer_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/players/test_standard_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/playing_algorithms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/services/test_reducing_cycle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/tests/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/utils/card_constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/president/utils/cards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/President.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/President.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/president/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/base_player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/computer_player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/hand.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/president_game.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/president/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/standard_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/president/players/standard_player.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,55 +47,116 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest_test_when_remove_cards_that_are_in_hand_then_remove_the_cards.coverage" NAME="Unittests for test_base_player.BasePlayerTest.test_when_remove_cards_that_are_in_hand_then_remove_the_cards Coverage Results" MODIFIED="1538663238024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_game_settings_GameSettingsTest.coverage" NAME="Unittests for test_game_settings.GameSettingsTest Coverage Results" MODIFIED="1539548212073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/tests/gameplay" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_standard_player_BasePlayerTest.coverage" NAME="Unittests for test_standard_player.BasePlayerTest Coverage Results" MODIFIED="1538663928934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$president_game.coverage" NAME="president_game Coverage Results" MODIFIED="1538661177142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_computer_player_BasePlayerTest.coverage" NAME="Unittests for test_computer_player.BasePlayerTest Coverage Results" MODIFIED="1539548182146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/tests/players" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_reducing_cycle_ReducingCycleTest.coverage" NAME="Unittests for test_reducing_cycle.ReducingCycleTest Coverage Results" MODIFIED="1539548160117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/tests/services" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_ReducingCycleTest_test_when_instantiate_BasePlayer_then_hand_is_not_None.coverage" NAME="Unittests for test_base_player.ReducingCycleTest.test_when_instantiate_BasePlayer_then_hand_is_not_None Coverage Results" MODIFIED="1538661468394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest.coverage" NAME="Unittests for test_base_player.BasePlayerTest Coverage Results" MODIFIED="1539548190463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/tests/players" />
+    <SUITE FILE_PATH="coverage/President$game.coverage" NAME="game Coverage Results" MODIFIED="1539549316942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/gameplay" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest_test_when_remove_card_that_is_in_hand_then_remove_the_card.coverage" NAME="Unittests for test_base_player.BasePlayerTest.test_when_remove_card_that_is_in_hand_then_remove_the_card Coverage Results" MODIFIED="1538663081999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$base_player.coverage" NAME="base_player Coverage Results" MODIFIED="1538401114275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest_test_when_add_cards_then_hand_contains_cards.coverage" NAME="Unittests for test_base_player.BasePlayerTest.test_when_add_cards_then_hand_contains_cards Coverage Results" MODIFIED="1538663241734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_ReducingCycleTest.coverage" NAME="Unittests for test_base_player.ReducingCycleTest Coverage Results" MODIFIED="1538662791882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest_test_when_add_card_then_hand_contains_card.coverage" NAME="Unittests for test_base_player.BasePlayerTest.test_when_add_card_then_hand_contains_card Coverage Results" MODIFIED="1538663288588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_adjustable_cycle_AdjustableLengthCycleTest_test_adjustable_length_cycle_instantiation.coverage" NAME="Unittests for test_adjustable_cycle.AdjustableLengthCycleTest.test_adjustable_length_cycle_instantiation Coverage Results" MODIFIED="1538614678069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_adjustable_cycle_AdjustableLengthCycleTest_test_next.coverage" NAME="Unittests for test_adjustable_cycle.AdjustableLengthCycleTest.test_next Coverage Results" MODIFIED="1538657957913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/President$Unittests_for_test_adjustable_cycle_AdjustableLengthCycleTest.coverage" NAME="Unittests for test_adjustable_cycle.AdjustableLengthCycleTest Coverage Results" MODIFIED="1538614822652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="351710976">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="py" value="1" />
+          <entry key="py" value="411" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="411" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Python Console" value="421" />
+          <entry key="dummy" value="104" />
           <entry key="gitignore" value="25" />
+          <entry key="py" value="13536" />
+          <entry key="txt" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="PLAIN_TEXT" value="218" />
+          <entry key="Python" value="13957" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/president_game.py">
+        <entry file="file://$PROJECT_DIR$/president/gameplay/round.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="e#1#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="260">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dealer_index</find>
+      <find>play_round(</find>
+      <find>valid</find>
+      <find>.next</find>
+      <find>Created a game with</find>
+      <find>deal</find>
+      <find>active_pos</find>
+      <find>next</find>
+      <find>adjustable_length_cycle</find>
+      <find>number_list</find>
+      <find>__get_hand_starting_index</find>
+      <find>START_CARD</find>
+      <find>num)ca</find>
+      <find>.hand.</find>
+      <find>validate_car</find>
+      <find>self</find>
+      <find>start_card</find>
+      <find>game_set</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>play(</replace>
+      <replace>reducing_cycle</replace>
+      <replace>char_list</replace>
+      <replace>ReducingCycle</replace>
+      <replace>start_card</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +164,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/server/rule_set.py" />
+        <option value="$PROJECT_DIR$/server/rules/base_rule.py" />
+        <option value="$PROJECT_DIR$/server/game_rules.py" />
+        <option value="$PROJECT_DIR$/server/turn_manager.py" />
+        <option value="$PROJECT_DIR$/server/cycle.py" />
+        <option value="$PROJECT_DIR$/server/AdjustableLengthCycle.py" />
+        <option value="$PROJECT_DIR$/server/president_tournament.py" />
+        <option value="$PROJECT_DIR$/server/president_game.py" />
+        <option value="$PROJECT_DIR$/server/round.py" />
+        <option value="$PROJECT_DIR$/server/venv/test_adjustable_cycle.py" />
+        <option value="$PROJECT_DIR$/server/adjustable_length_cycle.py" />
+        <option value="$PROJECT_DIR$/server/test_adjustable_cycle.py" />
+        <option value="$PROJECT_DIR$/server/test_reducing_cycle.py" />
+        <option value="$PROJECT_DIR$/server/reducing_cycle.py" />
+        <option value="$PROJECT_DIR$/server/hand.py" />
+        <option value="$PROJECT_DIR$/server/base_player.py" />
+        <option value="$PROJECT_DIR$/server/test_base_player.py" />
+        <option value="$PROJECT_DIR$/server/test_game_settings.py" />
+        <option value="$PROJECT_DIR$/server/test_computer_player.py" />
+        <option value="$PROJECT_DIR$/server/test_standard_player.py" />
+        <option value="$PROJECT_DIR$/server/rules/GameRound.py" />
+        <option value="$PROJECT_DIR$/server/GameTurn.py" />
+        <option value="$PROJECT_DIR$/server/GameHand.py" />
+        <option value="$PROJECT_DIR$/server/game_hand.py" />
+        <option value="$PROJECT_DIR$/server/game_turn.py" />
+        <option value="$PROJECT_DIR$/server/computer_player.py" />
+        <option value="$PROJECT_DIR$/server/playing_algorithms/base_algorithm.py" />
+        <option value="$PROJECT_DIR$/server/playing_algorithms/always_play_lowest.py" />
+        <option value="$PROJECT_DIR$/server/game_round.py" />
+        <option value="$PROJECT_DIR$/server/card_constants.py" />
+        <option value="$PROJECT_DIR$/server/requirements.txt" />
+        <option value="$PROJECT_DIR$/server/utils/cards.py" />
+        <option value="$PROJECT_DIR$/server/game_settings.py" />
+        <option value="$PROJECT_DIR$/server/game.py" />
+        <option value="$PROJECT_DIR$/server/gameplay/game.py" />
+        <option value="$PROJECT_DIR$/server/gameplay/turn.py" />
+        <option value="$PROJECT_DIR$/server/gameplay/round.py" />
+        <option value="$PROJECT_DIR$/server/gameplay/hand.py" />
+        <option value="$PROJECT_DIR$/server/gameplay/settings.py" />
+        <option value="$PROJECT_DIR$/president/tests/gameplay/test_game_settings.py" />
+        <option value="$PROJECT_DIR$/president/gameplay/game.py" />
+        <option value="$PROJECT_DIR$/president/players/base_player.py" />
+        <option value="$PROJECT_DIR$/president/players/standard_player.py" />
+        <option value="$PROJECT_DIR$/president/playing_algorithms/always_play_lowest.py" />
+        <option value="$PROJECT_DIR$/president/tests/players/test_computer_player.py" />
+        <option value="$PROJECT_DIR$/president/players/computer_player.py" />
+        <option value="$PROJECT_DIR$/president/utils/cards.py" />
+        <option value="$PROJECT_DIR$/president/gameplay/settings.py" />
+        <option value="$PROJECT_DIR$/president/services/reducing_cycle.py" />
+        <option value="$PROJECT_DIR$/president/tests/services/test_reducing_cycle.py" />
+        <option value="$PROJECT_DIR$/president/gameplay/round.py" />
       </list>
     </option>
   </component>
@@ -77,10 +225,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-154" />
-    <option name="y" value="-1028" />
-    <option name="width" value="1680" />
-    <option name="height" value="1028" />
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -97,7 +244,19 @@
             <path>
               <item name="President" type="b2602c69:ProjectViewProjectNode" />
               <item name="President" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="president" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="President" type="b2602c69:ProjectViewProjectNode" />
+              <item name="President" type="462c0819:PsiDirectoryNode" />
+              <item name="president" type="462c0819:PsiDirectoryNode" />
+              <item name="players" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="President" type="b2602c69:ProjectViewProjectNode" />
+              <item name="President" type="462c0819:PsiDirectoryNode" />
+              <item name="president" type="462c0819:PsiDirectoryNode" />
+              <item name="playing_algorithms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -112,6 +271,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/president/tests/gameplay" />
+      <recent name="$PROJECT_DIR$/president/tests/services" />
+      <recent name="$PROJECT_DIR$/president/tests/players" />
+      <recent name="$PROJECT_DIR$/server/players" />
+      <recent name="$PROJECT_DIR$/server/services" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -123,6 +291,151 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python.game">
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president/gameplay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/president/gameplay/game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_base_player.BasePlayerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president/tests/players" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_base_player.BasePlayerTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_computer_player.BasePlayerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president/tests/players" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_computer_player.BasePlayerTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_game_settings.GameSettingsTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president/tests/gameplay" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_game_settings.GameSettingsTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_reducing_cycle.ReducingCycleTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president/tests/services" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_reducing_cycle.ReducingCycleTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.gameplay.test_game_settings.GameSettingsTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.gameplay.test_game_settings.GameSettingsTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.players.test_base_player.BasePlayerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.players.test_base_player.BasePlayerTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.players.test_computer_player.BasePlayerTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="President" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/president" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.players.test_computer_player.BasePlayerTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Unittests for test_base_player.BasePlayerTest" />
+      <item itemvalue="Python tests.Unittests for test_game_settings.GameSettingsTest" />
+      <item itemvalue="Python tests.Unittests for test_computer_player.BasePlayerTest" />
+      <item itemvalue="Python tests.Unittests for test_reducing_cycle.ReducingCycleTest" />
+      <item itemvalue="Python.game" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.game" />
+        <item itemvalue="Python tests.Unittests for test_game_settings.GameSettingsTest" />
+        <item itemvalue="Python tests.Unittests for test_base_player.BasePlayerTest" />
+        <item itemvalue="Python tests.Unittests for test_computer_player.BasePlayerTest" />
+        <item itemvalue="Python tests.Unittests for test_reducing_cycle.ReducingCycleTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -137,25 +450,68 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_computer_player_BasePlayerTest - 2018.10.04 at 10h 36m 39s.xml">
+      <configuration name="Unittests for test_computer_player.BasePlayerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_standard_player_BasePlayerTest - 2018.10.04 at 10h 38m 49s.xml">
+      <configuration name="Unittests for test_standard_player.BasePlayerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_reducing_cycle_ReducingCycleTest - 2018.10.14 at 16h 14m 38s.xml">
+      <configuration name="Unittests for test_reducing_cycle.ReducingCycleTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_reducing_cycle_ReducingCycleTest - 2018.10.14 at 16h 16m 00s.xml">
+      <configuration name="Unittests for test_reducing_cycle.ReducingCycleTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_base_player_BasePlayerTest - 2018.10.14 at 16h 16m 16s.xml">
+      <configuration name="Unittests for test_base_player.BasePlayerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_computer_player_BasePlayerTest - 2018.10.14 at 16h 16m 19s.xml">
+      <configuration name="Unittests for test_computer_player.BasePlayerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_computer_player_BasePlayerTest - 2018.10.14 at 16h 16m 22s.xml">
+      <configuration name="Unittests for test_computer_player.BasePlayerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_base_player_BasePlayerTest - 2018.10.14 at 16h 16m 30s.xml">
+      <configuration name="Unittests for test_base_player.BasePlayerTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_game_settings_GameSettingsTest - 2018.10.14 at 16h 16m 37s.xml">
+      <configuration name="Unittests for test_game_settings.GameSettingsTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_game_settings_GameSettingsTest - 2018.10.14 at 16h 16m 52s.xml">
+      <configuration name="Unittests for test_game_settings.GameSettingsTest" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-154" y="-1028" width="1680" height="1028" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="825" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21550672" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26180258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3287858" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3287858" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39972714" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287858" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3287858" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32905984" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3287858" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3287858" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -171,6 +527,33 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Add tests, implement game settings and cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests, implement game settings and cleanup" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>self.remaining_players</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>next(self.__players_cycle)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.__active_player = next(self.__players_cycle)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -179,13 +562,245 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/president_game.py">
+    <entry file="file://$PROJECT_DIR$/president/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/rule_set.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/game_rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="51">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/round.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1218041889/itertools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="282" column="6" selection-start-line="282" selection-start-column="6" selection-end-line="282" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="828" selection-start-line="828" selection-end-line="828" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/diff_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1218041889/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="323" column="4" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/tests/players/test_standard_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/rules/GameRound.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/game_settings/base_rule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/venv/lib/python3.6/site-packages/pyCardDeck/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/utils/card_constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/venv/lib/python3.6/site-packages/pyCardDeck/cards.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/tests/players/test_base_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <marker date="1539549732153" expanded="true" signature="1040:1049" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/tests/gameplay/test_game_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="5" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/turn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/players/base_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1539549732162" expanded="true" signature="291:412" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/players/standard_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/tests/players/test_computer_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/players/computer_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/utils/cards.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1539549980817" expanded="true" signature="382:535" ph="..." />
+            <marker date="1539549980817" expanded="true" signature="1772:1781" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/services/reducing_cycle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1539549974655" expanded="true" signature="423:428" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/tests/services/test_reducing_cycle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="116" column="104" selection-start-line="116" selection-start-column="104" selection-end-line="116" selection-end-column="104" />
+          <folding>
+            <marker date="1539550109347" expanded="true" signature="3802:3811" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/playing_algorithms/base_algorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <marker date="1538665662824" expanded="true" signature="63:64" ph="..." />
+            <marker date="1538665662824" expanded="true" signature="63:69" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/playing_algorithms/always_play_lowest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/round.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
