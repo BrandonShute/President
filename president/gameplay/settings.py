@@ -62,9 +62,21 @@ class Settings:
     def __load_card_rankings(self):
         # TODO:brandon.shute:2018-10-14: Implement this method generically
         # from start card.
-        self.__card_rankings = {'3': 0, '4': 1, '5': 2, '6': 3, '7': 4, '8': 5,
-                                '9': 6, '10': 7, 'J': 8, 'Q': 9, 'K': 10,
-                                'A': 11, '2': 12}
+        self.__card_rankings = {
+            '3': 0,
+            '4': 1,
+            '5': 2,
+            '6': 3,
+            '7': 4,
+            '8': 5,
+            '9': 6,
+            '10': 7,
+            'J': 8,
+            'Q': 9,
+            'K': 10,
+            'A': 11,
+            '2': 12
+        }
 
     def __validate_number_of_cards_played(self, cards_played: list,
                                           last_played: list) -> None:

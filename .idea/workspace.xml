@@ -2,44 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfaec4d5-9387-4708-81c7-d7b40c8cb3e7" name="Default Changelist" comment="Add tests, implement game settings and cleanup">
-      <change afterPath="$PROJECT_DIR$/president/gameplay/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/gameplay/game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/gameplay/hand.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/gameplay/round.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/gameplay/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/gameplay/turn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/players/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/players/base_player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/players/computer_player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/playing_algorithms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/playing_algorithms/always_play_lowest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/playing_algorithms/base_algorithm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/services/reducing_cycle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/gameplay/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/gameplay/test_game_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/players/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/players/test_base_player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/players/test_computer_player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/players/test_standard_player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/playing_algorithms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/services/test_reducing_cycle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/tests/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/utils/card_constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/president/utils/cards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/President.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/President.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/president/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/base_player.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/computer_player.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/hand.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/president_game.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/president/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/standard_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/president/players/standard_player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/president/gameplay/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/president/gameplay/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/president/utils/card_constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/president/utils/card_constants.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +22,7 @@
     <SUITE FILE_PATH="coverage/President$Unittests_for_test_reducing_cycle_ReducingCycleTest.coverage" NAME="Unittests for test_reducing_cycle.ReducingCycleTest Coverage Results" MODIFIED="1539548160117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/tests/services" />
     <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_ReducingCycleTest_test_when_instantiate_BasePlayer_then_hand_is_not_None.coverage" NAME="Unittests for test_base_player.ReducingCycleTest.test_when_instantiate_BasePlayer_then_hand_is_not_None Coverage Results" MODIFIED="1538661468394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest.coverage" NAME="Unittests for test_base_player.BasePlayerTest Coverage Results" MODIFIED="1539548190463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/tests/players" />
-    <SUITE FILE_PATH="coverage/President$game.coverage" NAME="game Coverage Results" MODIFIED="1539549316942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/gameplay" />
+    <SUITE FILE_PATH="coverage/President$game.coverage" NAME="game Coverage Results" MODIFIED="1539572591716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/president/gameplay" />
     <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest_test_when_remove_card_that_is_in_hand_then_remove_the_card.coverage" NAME="Unittests for test_base_player.BasePlayerTest.test_when_remove_card_that_is_in_hand_then_remove_the_card Coverage Results" MODIFIED="1538663081999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/President$base_player.coverage" NAME="base_player Coverage Results" MODIFIED="1538401114275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/President$Unittests_for_test_base_player_BasePlayerTest_test_when_add_cards_then_hand_contains_cards.coverage" NAME="Unittests for test_base_player.BasePlayerTest.test_when_add_cards_then_hand_contains_cards Coverage Results" MODIFIED="1538663241734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
@@ -70,24 +36,24 @@
     <session id="351710976">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="py" value="411" />
+          <entry key="py" value="432" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="411" />
+          <entry key="Python" value="432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -95,14 +61,14 @@
           <entry key="Python Console" value="421" />
           <entry key="dummy" value="104" />
           <entry key="gitignore" value="25" />
-          <entry key="py" value="13536" />
+          <entry key="py" value="13562" />
           <entry key="txt" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="218" />
-          <entry key="Python" value="13957" />
+          <entry key="Python" value="13983" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -112,10 +78,15 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/president/gameplay/round.py">
+        <entry file="file://$PROJECT_DIR$/president/gameplay/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="163">
+              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1539613655866" expanded="true" signature="382:535" ph="..." />
+                <marker date="1539613655866" expanded="true" signature="1772:1781" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/rule_set.py" />
         <option value="$PROJECT_DIR$/server/rules/base_rule.py" />
         <option value="$PROJECT_DIR$/server/game_rules.py" />
         <option value="$PROJECT_DIR$/server/turn_manager.py" />
@@ -211,10 +181,11 @@
         <option value="$PROJECT_DIR$/president/tests/players/test_computer_player.py" />
         <option value="$PROJECT_DIR$/president/players/computer_player.py" />
         <option value="$PROJECT_DIR$/president/utils/cards.py" />
-        <option value="$PROJECT_DIR$/president/gameplay/settings.py" />
         <option value="$PROJECT_DIR$/president/services/reducing_cycle.py" />
         <option value="$PROJECT_DIR$/president/tests/services/test_reducing_cycle.py" />
         <option value="$PROJECT_DIR$/president/gameplay/round.py" />
+        <option value="$PROJECT_DIR$/president/utils/card_constants.py" />
+        <option value="$PROJECT_DIR$/president/gameplay/settings.py" />
       </list>
     </option>
   </component>
@@ -250,13 +221,13 @@
               <item name="President" type="b2602c69:ProjectViewProjectNode" />
               <item name="President" type="462c0819:PsiDirectoryNode" />
               <item name="president" type="462c0819:PsiDirectoryNode" />
-              <item name="players" type="462c0819:PsiDirectoryNode" />
+              <item name="gameplay" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="President" type="b2602c69:ProjectViewProjectNode" />
               <item name="President" type="462c0819:PsiDirectoryNode" />
               <item name="president" type="462c0819:PsiDirectoryNode" />
-              <item name="playing_algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +240,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -421,6 +392,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python tests.Unittests for tests.gameplay.test_game_settings.GameSettingsTest" />
+      <item itemvalue="Python tests.Unittests for tests.players.test_base_player.BasePlayerTest" />
+      <item itemvalue="Python tests.Unittests for tests.players.test_computer_player.BasePlayerTest" />
       <item itemvalue="Python tests.Unittests for test_base_player.BasePlayerTest" />
       <item itemvalue="Python tests.Unittests for test_game_settings.GameSettingsTest" />
       <item itemvalue="Python tests.Unittests for test_computer_player.BasePlayerTest" />
@@ -448,6 +422,14 @@
       <option name="presentableId" value="Default" />
       <updated>1538400450892</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add tests, implement game settings and cleanup">
+      <created>1539550179948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539550179948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -482,7 +464,7 @@
       <configuration name="Unittests for test_game_settings.GameSettingsTest" configurationId="tests" />
     </history-entry>
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -495,10 +477,9 @@
     <frame x="0" y="22" width="1440" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26180258" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2653791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3287858" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3287858" />
@@ -510,8 +491,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3287858" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3287858" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3287858" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3287858" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3287858" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -528,7 +510,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Add tests, implement game settings and cleanup" />
     <option name="LAST_COMMIT_MESSAGE" value="Add tests, implement game settings and cleanup" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
@@ -565,19 +546,9 @@
     <entry file="file://$PROJECT_DIR$/president/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/rule_set.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/game_rules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/round.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server/rule_set.py" />
+    <entry file="file://$PROJECT_DIR$/server/game_rules.py" />
+    <entry file="file://$PROJECT_DIR$/server/round.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1218041889/itertools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
@@ -606,13 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/hand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server/hand.py" />
     <entry file="file://$PROJECT_DIR$/president/tests/players/test_standard_player.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -623,19 +588,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/rules/GameRound.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/game_settings/base_rule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/president/venv/lib/python3.6/site-packages/pyCardDeck/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server/rules/GameRound.py" />
+    <entry file="file://$PROJECT_DIR$/server/game_settings/base_rule.py" />
+    <entry file="file://$PROJECT_DIR$/president/venv/lib/python3.6/site-packages/pyCardDeck/__init__.py" />
     <entry file="file://$PROJECT_DIR$/president/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -643,20 +598,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/president/utils/card_constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/president/venv/lib/python3.6/site-packages/pyCardDeck/cards.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/president/venv/lib/python3.6/site-packages/pyCardDeck/cards.py" />
     <entry file="file://$PROJECT_DIR$/president/tests/players/test_base_player.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -673,34 +615,6 @@
           <caret line="6" column="7" lean-forward="true" selection-start-line="5" selection-end-line="6" selection-end-column="7" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/president/gameplay/turn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/president/gameplay/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="e#1#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/president/players/base_player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1539549732162" expanded="true" signature="291:412" ph="..." />
           </folding>
         </state>
       </provider>
@@ -739,29 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/president/gameplay/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1539549980817" expanded="true" signature="382:535" ph="..." />
-            <marker date="1539549980817" expanded="true" signature="1772:1781" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/president/services/reducing_cycle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1539549974655" expanded="true" signature="423:428" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/president/tests/services/test_reducing_cycle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -790,17 +681,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/president/gameplay/hand.py">
+    <entry file="file://$PROJECT_DIR$/president/services/reducing_cycle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        <state relative-caret-position="527">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1539549974655" expanded="true" signature="423:428" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/players/base_player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1539549732162" expanded="true" signature="291:412" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/turn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/president/gameplay/round.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="68">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/hand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/utils/card_constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/president/gameplay/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1539613655866" expanded="true" signature="382:535" ph="..." />
+            <marker date="1539613655866" expanded="true" signature="1772:1781" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
