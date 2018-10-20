@@ -83,16 +83,32 @@ class Settings:
         num_played = len(cards_played)
         num_played_last = len(last_played)
 
-        if num_played == 0 or num_played == num_played_last:
+        if num_played == 0:
             return
 
-        if cards_played in self.trump_cards and num_played == (
-                num_played_last - 1):
+        if cards_played[0] in self.trump_cards:
+            self.__validate_number_of_trump_cards_played(num_played, num_played_last)
+        else:
+            self.__validate_number_of_non_trump_played(num_played, num_played_last)
+
+
+    @staticmethod
+    def __validate_number_of_non_trump_played(num_played: int,
+                                              num_played_last: int) -> None:
+        if num_played == num_played_last:
             return
 
-        raise Exception(
-            'Expected {num_expected} cards but {num_played} were played.'.format(
-                num_expected=len(last_played), num_played=num_played))
+        raise Exception('Expected {} cards but {} were played.'
+                        .format(num_played_last, num_played)
+                        )
+
+    @staticmethod
+    def __validate_number_of_trump_cards_played(num_played: int,
+                                                num_played_last: int) -> None:
+        if num_played == (num_played_last - 1):
+            return
+
+        raise Exception('When playing trump cards, you must play one less than previous play.')
 
     @staticmethod
     def __validate_multiple_card_played(cards_played: list) -> None:
@@ -110,7 +126,7 @@ class Settings:
         first_card_rank = self.__card_rankings[cards[0].rank]
         first_last_played_rank = self.__card_rankings[last_played[0].rank]
         if first_card_rank < first_last_played_rank:
-            raise Exception('Cannot play a lower card than the last player')
+            raise Exception('Cannot play a lower card than the last player.')
 
 
 game_settings = Settings()

@@ -26,7 +26,7 @@ class CardsTest(TestCase):
             get_card(suit, short_name)
 
         expected_error = 'FAKE SUIT is not a supported suit.'
-        self.assertTrue(expected_error in str(context.exception))
+        self.assertEquals(expected_error, str(context.exception))
 
     def test_when_get_card_for_invalid_short_name_then_throw_exception(self):
         suit = card_cons.HEARTS
@@ -36,4 +36,4 @@ class CardsTest(TestCase):
             get_card(suit, short_name)
 
         expected_error = 'There is no card for short name \"Invalid Name\".'
-        self.assertTrue(expected_error in str(context.exception))
+        self.assertEquals(expected_error, str(context.exception))
