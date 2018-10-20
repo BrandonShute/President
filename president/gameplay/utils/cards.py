@@ -1,6 +1,6 @@
 from pyCardDeck import PokerCard
 
-from utils import card_constants as card_cons
+from gameplay.utils import card_constants as card_cons
 
 
 def get_card(suit: str, card_short_name: str) -> PokerCard:

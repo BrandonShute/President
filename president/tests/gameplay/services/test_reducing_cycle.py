@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from services.reducing_cycle import ReducingCycle
+from gameplay.services.reducing_cycle import ReducingCycle
 
 
 class ReducingCycleTest(TestCase):
@@ -32,9 +32,11 @@ class ReducingCycleTest(TestCase):
         start_index = 4
         char_list = ['a', 'b', 'c', 'd']
 
-        # TODO:brandon.shute:2018-10-04: Determine how to check exception raise  # reducing_cycle = ReducingCycle(  #     players=char_list, start_index=start_index  # )
+        with self.assertRaises(Exception) as context:
+            ReducingCycle(players=char_list,start_index=start_index)
 
-        # self.assertRaises()
+        expected_error = 'Cannot set start index to 4 when Cycle has 4 players'
+        self.assertTrue(expected_error in str(context.exception))
 
     def test_when_next_on_new_ReducingCycle_without_starting_index_then_return_second_element(
             self):

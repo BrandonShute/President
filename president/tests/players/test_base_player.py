@@ -111,4 +111,8 @@ class BasePlayerTest(TestCase):
 
         player = StandardPlayer(name='Brandon')
 
-        # TODO:brandon.shute:2018-10-04: Determine how to check exception raise  # player.remove_card(card)  # self.assertRaises()
+        with self.assertRaises(Exception) as context:
+            player.remove_card(card)
+
+        expected_error = '{} was not found in the hand.'.format(card.name)
+        self.assertTrue(expected_error in str(context.exception))

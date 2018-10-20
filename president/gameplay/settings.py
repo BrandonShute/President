@@ -1,7 +1,7 @@
 from pyCardDeck import PokerCard
 
-from utils import card_constants as card_cons
-from utils.cards import get_card
+from gameplay.utils import card_constants as card_cons
+from gameplay.utils.cards import get_card
 
 # TODO:brandon.shute:2018-10-04: Allow for jokers
 # TODO:brandon.shute:2018-10-14: Implement turn skip for same card

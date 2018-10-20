@@ -1,7 +1,7 @@
 from gameplay.settings import game_settings
 from gameplay.turn import Turn
 from players.base_player import BasePlayer
-from services.reducing_cycle import ReducingCycle
+from gameplay.services.reducing_cycle import ReducingCycle
 
 
 class Round:

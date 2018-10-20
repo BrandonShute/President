@@ -39,8 +39,8 @@ class BasePlayer(ABC):
         try:
             self.__cards.remove(card_to_remove)
         except ValueError:
-            raise Exception('{card_name} was not found in the hand.'.format(
-                card_name=card_to_remove.name))
+            raise Exception('{} was not found in the hand.'
+                            .format(card_to_remove.name))
 
     def remove_cards(self, cards_to_remove: list) -> None:
         for card in cards_to_remove:

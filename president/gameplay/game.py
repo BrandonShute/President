@@ -2,7 +2,7 @@ from pyCardDeck import Deck
 
 from gameplay.hand import Hand
 from gameplay.settings import game_settings
-from services.reducing_cycle import ReducingCycle
+from gameplay.services.reducing_cycle import ReducingCycle
 
 
 # TODO:brandon.shute:2018-09-30: Add typing
