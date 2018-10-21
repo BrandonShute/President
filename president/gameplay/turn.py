@@ -20,3 +20,7 @@ class Turn:
     @property
     def player(self) -> BasePlayer:
         return self.__player
+
+    @property
+    def player_passed(self) -> BasePlayer:
+        return self.cards_played == []

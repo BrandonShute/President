@@ -1,31 +1,22 @@
-from pyCardDeck import PokerCard
-
-from gameplay.utils import card_constants as card_cons
-from gameplay.utils.cards import get_card
+from gameplay.card_constants import SPADES
 
 # TODO:brandon.shute:2018-10-04: Allow for jokers
 # TODO:brandon.shute:2018-10-14: Implement turn skip for same card
 
 START_RANK = '3'
 START_CARD_SHORT_NAME = '3'
-START_CARD_SUIT = card_cons.SPADES
+START_CARD_SUIT = SPADES
 TRUMP_CARD_SHORT_NAME = '2'
 
 
 class Settings:
 
     def __init__(self):
-        self.__start_card = get_card(START_CARD_SUIT, START_CARD_SHORT_NAME)
-        self.__load_trump_cards()
         self.__load_card_rankings()
 
     @property
-    def start_card(self) -> PokerCard:
-        return self.__start_card
-
-    @property
-    def trump_cards(self) -> list:
-        return self.__trump_cards
+    def trump_card_rank(self) -> list:
+        return self.__card_rankings[TRUMP_CARD_SHORT_NAME]
 
     @property
     def card_rankings(self) -> dict:
@@ -54,10 +45,10 @@ class Settings:
         self.__validate_number_of_cards_played(cards, last_played)
         self.__validate_card_ranks(cards, last_played)
 
-    def __load_trump_cards(self) -> None:
-        self.__trump_cards = []
-        for suit in card_cons.SUITS:
-            self.__trump_cards.append(get_card(suit, TRUMP_CARD_SHORT_NAME))
+    @staticmethod
+    def is_start_card(card) -> bool:
+        return card.suit == START_CARD_SUIT and \
+               card.rank == START_CARD_SHORT_NAME
 
     def __load_card_rankings(self):
         # TODO:brandon.shute:2018-10-14: Implement this method generically
@@ -86,7 +77,7 @@ class Settings:
         if num_played == 0:
             return
 
-        if cards_played[0] in self.trump_cards:
+        if cards_played[0].president_rank == self.trump_card_rank:
             self.__validate_number_of_trump_cards_played(num_played, num_played_last)
         else:
             self.__validate_number_of_non_trump_played(num_played, num_played_last)

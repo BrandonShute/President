@@ -36,7 +36,7 @@ class ReducingCycleTest(TestCase):
             ReducingCycle(players=char_list,start_index=start_index)
 
         expected_error = 'Cannot set start index to 4 when Cycle has 4 players.'
-        self.assertEquals(expected_error, str(context.exception))
+        self.assertEqual(expected_error, str(context.exception))
 
     def test_when_next_on_new_ReducingCycle_without_starting_index_then_return_second_element(
             self):

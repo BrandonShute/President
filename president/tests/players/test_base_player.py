@@ -115,4 +115,4 @@ class BasePlayerTest(TestCase):
             player.remove_card(card)
 
         expected_error = '{} was not found in the hand.'.format(card.name)
-        self.assertEquals(expected_error, str(context.exception))
+        self.assertEqual(expected_error, str(context.exception))

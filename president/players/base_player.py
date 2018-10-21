@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from pyCardDeck import PokerCard
+from gameplay.president_card import PresidentCard
 
 
 class BasePlayer(ABC):
@@ -22,7 +22,7 @@ class BasePlayer(ABC):
     def play_turn(self):
         pass
 
-    def has_card(self, card: PokerCard) -> bool:
+    def has_card(self, card: PresidentCard) -> bool:
         for hand_card in self.cards:
             if hand_card == card:
                 return True
@@ -32,10 +32,10 @@ class BasePlayer(ABC):
     def add_cards(self, cards_to_add: list) -> None:
         self.__cards.extend(cards_to_add)
 
-    def add_card(self, card_to_add: PokerCard) -> None:
+    def add_card(self, card_to_add: PresidentCard) -> None:
         self.add_cards([card_to_add])
 
-    def remove_card(self, card_to_remove: PokerCard) -> None:
+    def remove_card(self, card_to_remove: PresidentCard) -> None:
         try:
             self.__cards.remove(card_to_remove)
         except ValueError:
@@ -46,6 +46,8 @@ class BasePlayer(ABC):
         for card in cards_to_remove:
             self.remove_card(card)
 
-    # TODO:brandon.shute:2018-09-30: Sort based on president card ordering
     def organize_cards(self, descending_order: bool = False) -> None:
-        pass
+        self.__cards.sort(key=lambda card: card.president_rank,
+                          reverse=descending_order)
+
+

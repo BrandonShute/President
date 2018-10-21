@@ -3,6 +3,8 @@ from pyCardDeck import Deck
 from gameplay.hand import Hand
 from gameplay.settings import game_settings
 from gameplay.services.reducing_cycle import ReducingCycle
+from gameplay.card_constants import SUITS, SHORT_NAME_TO_LONG_NAME
+from gameplay.president_card import PresidentCard
 
 
 # TODO:brandon.shute:2018-09-30: Add typing
@@ -15,7 +17,7 @@ class Game:
         # TODO:brandon.shute:2018-10-04: Deck should be managed in GameHand
         # TODO:brandon.shute:2018-09-30: Implement many decks for big games
         # TODO:brandon.shute:2018-10-03: Move deck down to Hand
-        self.deck = Deck()
+        self.deck = Deck(reshuffle=False)
         self.players = players
         self.__dealer_cycle = ReducingCycle(players=players, start_index=0)
         self.hands = []
@@ -39,10 +41,6 @@ class Game:
 
         self.__organize_player_cards()
 
-        # TODO:brandon.shute:2018-10-04: Implement hand sorting
-        # for player in self.players:
-        #     player.organize_cards()
-
         next(self.__dealer_cycle)
 
     @property
@@ -50,8 +48,10 @@ class Game:
         return self.__num_hands_to_play < len(self.hands)
 
     def __generate_deck(self) -> None:
-        # TODO:brandon.shute:2018-09-30: Generate myself to set ranking
-        self.deck.load_standard_deck()  # TODO:brandon.shute:2018-09-30: Add ability to have jokers
+        # TODO:brandon.shute:2018-09-30: Add ability to have jokers
+        for suit in SUITS:
+            for short_name in SHORT_NAME_TO_LONG_NAME.keys():
+                self.deck.add_single(PresidentCard(suit, short_name))
 
     def __get_hand_starting_index(self):
         if len(self.hands) == 0:
@@ -63,13 +63,13 @@ class Game:
     def __get_player_with_start_card(self):
         player_index = 0
         for player in self.players:
-            if game_settings.start_card in player.cards:
+            if any([game_settings.is_start_card(card) for card in player.cards]):
                 return player_index
             player_index += 1
 
         raise Exception(
-            'No player had the start card specified in the game settings: {start_card}'.format(
-                start_card=game_settings.start_card.name))
+            'No player has the start card specified in the game settings'
+        )
 
     def __organize_player_cards(self):
         for player in self.players:

@@ -11,12 +11,10 @@ class Hand:
 
     def play_hand(self):
         while not self.hand_over:
-            self.__print_board()
             current_round = Round(players=self.remaining_players,
                                   start_player_index=self.__get_round_starting_index())
             current_round.play_round()
             self.rounds.append(current_round)
-            self.__print_last_play()
 
     @property
     def last_round(self) -> Round:
@@ -51,20 +49,3 @@ class Hand:
 
         # TODO:brandon.shute:2018-10-02: Find the index of the next player if the winner is out
         return 0
-
-    # TODO:brandon.shute:2018-09-30: This will be removed, used for visualizing
-    def __print_board(self):
-        print('CURRENT BOARD: \n')
-        for player in self.__players:
-            print('-----------')
-            print('{name}'.format(name=player.name))
-            print('-----------')
-            [print('{card_name}'.format(card_name=card.name)) for card in
-             player.cards]
-            print('\n')
-
-    # TODO:brandon.shute:2018-09-30: This will be removed, used for visualizing
-    def __print_last_play(self):
-        print('Last Play:')
-        [print('{card_name}'.format(card_name=card.name)) for card in
-         self.last_round.last_turn.cards_played]
