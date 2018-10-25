@@ -5,3 +5,7 @@ ENV/
 
 # Mac file details
 .DS_Store
+
+# Idea related files
+./idea/dictionaries
+./idea/workspace.xml
