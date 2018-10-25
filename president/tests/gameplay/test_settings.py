@@ -52,7 +52,33 @@ class SettingsTest(TestCase):
 
         game_settings.validate_cards(cards, last_played)
 
-    def test_when_current_play_is_trump_not_one_less_than_last_played_then_throw_exception(self):
+    def test_when_last_play_is_one_card_and_one_trump_card_is_played_then_do_not_throw_exception(self):
+        cards = [
+            PresidentCard(HEARTS, TRUMP_CARD_SHORT_NAME),
+        ]
+        last_played = [
+            PresidentCard(HEARTS, '3'),
+        ]
+
+        game_settings.validate_cards(cards, last_played)
+
+    def test_when_last_play_is_more_than_one_card_and_same_number_of_trumps_played_then_throw_exception(self):
+        cards = [
+            PresidentCard(HEARTS, TRUMP_CARD_SHORT_NAME),
+            PresidentCard(DIAMONDS, TRUMP_CARD_SHORT_NAME),
+        ]
+        last_played = [
+            PresidentCard(CLUBS, '3'),
+            PresidentCard(DIAMONDS, '3'),
+        ]
+
+        with self.assertRaises(Exception) as context:
+            game_settings.validate_cards(cards, last_played)
+
+        expected_error = 'When playing trump cards, you must play one less than previous play.'
+        self.assertEqual(expected_error, str(context.exception))
+
+    def test_when_last_play_is_three_card_and_current_play_is_one_trump_then_throw_exception(self):
         cards = [
             PresidentCard(HEARTS, TRUMP_CARD_SHORT_NAME)
         ]
@@ -147,3 +173,12 @@ class SettingsTest(TestCase):
         result = game_settings.is_start_card(card)
 
         self.assertEqual(False, result)
+
+    def test_when_validate_cards_for_no_cards_played_then_do_not_throw_exception(self):
+        cards = []
+        last_played = [
+            PresidentCard(HEARTS, '3'),
+        ]
+
+        game_settings.validate_cards(cards, last_played)
+

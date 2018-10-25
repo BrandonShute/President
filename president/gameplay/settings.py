@@ -74,9 +74,6 @@ class Settings:
         num_played = len(cards_played)
         num_played_last = len(last_played)
 
-        if num_played == 0:
-            return
-
         if cards_played[0].president_rank == self.trump_card_rank:
             self.__validate_number_of_trump_cards_played(num_played, num_played_last)
         else:
@@ -96,7 +93,9 @@ class Settings:
     @staticmethod
     def __validate_number_of_trump_cards_played(num_played: int,
                                                 num_played_last: int) -> None:
-        if num_played == (num_played_last - 1):
+        if num_played_last == 1 and num_played == num_played_last:
+            return
+        elif num_played == (num_played_last - 1):
             return
 
         raise Exception('When playing trump cards, you must play one less than previous play.')
