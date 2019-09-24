@@ -6,6 +6,7 @@ class Hand:
 
     def __init__(self, players: list, start_player_index: int):
         self.__players = players
+        self.__remaining_players = players.copy()
         self.__game_start_index = start_player_index
         self.rounds = []
 
@@ -14,7 +15,13 @@ class Hand:
             current_round = Round(players=self.remaining_players,
                                   start_player_index=self.__get_round_starting_index())
             current_round.play_round()
+            self.__remove_players_with_no_cards()
             self.rounds.append(current_round)
+
+    def __remove_players_with_no_cards(self):
+        for player in self.__remaining_players:
+            if player.has_no_cards:
+                self.__remaining_players.remove(player)
 
     @property
     def last_round(self) -> Round:
@@ -25,10 +32,7 @@ class Hand:
 
     @property
     def remaining_players(self) -> list:
-        if self.last_round is None:
-            return self.__players
-
-        return self.last_round.round_players.remaining_players
+        return self.__remaining_players
 
     @property
     def last_round_winner(self) -> BasePlayer:

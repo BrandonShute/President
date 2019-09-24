@@ -153,17 +153,38 @@ class SettingsTest(TestCase):
 
         game_settings.validate_cards(cards, last_played)
 
-    def test_passed_start_card_then_is_start_card_returns_true(self):
+    def test_when_passed_start_card_then_is_start_card_returns_true(self):
         card = PresidentCard(START_CARD_SUIT, START_CARD_SHORT_NAME)
 
         result = game_settings.is_start_card(card)
 
         self.assertEqual(True, result)
 
-    def test_passed_card_with_different_suit_then_is_start_card_returns_false(self):
+    def test_when_passed_card_with_different_suit_then_is_start_card_returns_false(self):
         card = PresidentCard(HEARTS, START_CARD_SHORT_NAME)
 
         result = game_settings.is_start_card(card)
+
+        self.assertEqual(False, result)
+
+    def test_when_passed_card_with_different_rank_then_is_start_card_returns_false(self):
+        card = PresidentCard(START_CARD_SUIT, '7')
+
+        result = game_settings.is_start_card(card)
+
+        self.assertEqual(False, result)
+
+    def test_when_passed_trump_card_then_is_trump_card_returns_true(self):
+        card = PresidentCard(HEARTS, TRUMP_CARD_SHORT_NAME)
+
+        result = game_settings.is_trump_card(card)
+
+        self.assertEqual(True, result)
+
+    def test_when_passed_card_other_than_trump_rank_then_is_trump_card_returns_false(self):
+        card = PresidentCard(HEARTS, '7')
+
+        result = game_settings.is_trump_card(card)
 
         self.assertEqual(False, result)
 

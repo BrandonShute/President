@@ -57,7 +57,7 @@ class Game:
         if len(self.hands) == 0:
             return self.__get_player_with_start_card()
 
-        # TODO:brandon.shute:2018-10-02: Implment based on results of last round
+        # TODO:brandon.shute:2018-10-02: Implement based on results of last round
         return self.__dealer_cycle.active_position
 
     def __get_player_with_start_card(self):

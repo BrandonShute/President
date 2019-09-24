@@ -47,8 +47,10 @@ class Settings:
 
     @staticmethod
     def is_start_card(card) -> bool:
-        return card.suit == START_CARD_SUIT and \
-               card.rank == START_CARD_SHORT_NAME
+        return card.suit == START_CARD_SUIT and card.rank == START_CARD_SHORT_NAME
+
+    def is_trump_card(self, card) -> bool:
+        return card.president_rank == self.trump_card_rank
 
     def __load_card_rankings(self):
         # TODO:brandon.shute:2018-10-14: Implement this method generically

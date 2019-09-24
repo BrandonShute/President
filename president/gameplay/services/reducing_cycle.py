@@ -4,6 +4,9 @@ from players.base_player import BasePlayer
 
 
 class ReducingCycle:
+    """
+    This is a generic implementation of a cycle which can reduce in size.
+    """
 
     def __init__(self, players: list, start_index: int = 0):
         self.__players = players
